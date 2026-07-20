@@ -1,0 +1,53 @@
+<script>
+// 
+// Naiylah Salaam 
+// nsalaam@my.waketech.edu 
+// 6/22/26 
+//
+</script>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>codingExam</title>
+</head>
+
+
+<body>
+    <input id="loan_Amount" type="number" placeholder="Enter loan amount (no commas)">
+    <input id="term_Years" type="number" placeholder="Enter loan term">
+    <button type="submit" id="Button1" >Amoritization</button>
+    <p id="mort_years"></p>
+    <p id="mort_rate"></p>
+    <p id="mort_amount"></p>
+    <p id="total_Iamount"></p>
+    <p id="total_Mamount"></p>
+
+    <script>
+        interestRate = 0.0575;
+        loanAmount = document.getElementById("loan_Amount").value;
+        termYears = document.getElementById("term_Years").value;
+
+        monthlyPayment = (((interestRate / 12) * loanAmount) / (1 - Math.pow(1 + (interestRate / 12), (termYears * -12)))).toFixed(2);
+        
+        total_I = termYears*interestRate
+        mort_A = loanAmount + total_I
+        total_IA = (monthlyPayment*termYears*12)-mort_A
+        total_M = loanAmount + total_I
+
+        function amoritization(){
+            
+            document.getElementById("mort_years").innerHTML = (termYears);
+            document.getElementById("mort_rate").innerHTML = (total_I);
+            document.getElementById("mort_amount").innerHTML = (mort_A);
+            document.getElementById("total_Iamount").innerHTML = (total_IA);
+            document.getElementById("total_Mamount").innerHTML = (total_M);
+        };
+        
+        document.getElementById('Button1').addEventListener('click', function(){
+        amoritization()
+        });
+
+    // I did not have enough time to add input validation or actually make this work and look good bc I can't code that fast
+    </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Timer</title>
+</head>
+<body>
+<h1 id="Timer"></h1>
+<input type="button" id="startTimer" value="Start Timer"><br>
+<input type="button" id="stopTimer" value="Stop Timer"><br> 
+<input type="button" id="resetTimer" value="Reset Timer"><br>
+
+    <script src="Timer.js defer">
+        
+        document.getElementById('startTimer').addEventListener('click', function(){
+        counter();
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <script>
+        $("document").ready(function(){
+            document.getElementById("button1").addEventListener("click",
+            function (evt){
+                $("p").css("color","white");
+                $("h1").css("color","white")
+                $("body").css("background-color","black")
+                
+            });
+        
+            document.getElementById("button2").addEventListener("click",
+            function (evt){
+                $("h1").animate({fontSize:"toggle",opacity:"toggle"});
+            })
+
+        });
+    </script>
+</head>
+<title>jQuery Coding</title>
+<h1>Hello World</h1>
+<body>
+    <p>My name is Naiylah Salaam and I am learning to code JavaScript!</p>
+<br>
+    <button id="button1">NightMode</button>
+    
+    <button id="button2">"Hello"</button>
+
+    
+</body>
+</html>
