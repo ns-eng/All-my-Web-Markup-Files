@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="InteractiveTaskManager.js" defer></script>
+
+</head>
+<title>TaskFlow Solutions</title>
+
+<!-- Stylizes the page so it looks appealing -->
+<style>
+    h1 {
+    text-align: center;
+    color: #000000;
+    }
+
+    body {
+    text-align: center;
+    background-color: #76b2dd;
+    }
+
+    form {
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 50px;
+    border: 1px solid #000000;
+    }
+
+    input[type="text"] {
+    width: 40%;
+    padding: 2px;
+    font-size: 14px;
+    border-radius: 1px;
+    border: 1px solid #aeaeaec1;
+    }
+
+    div {
+    border-radius: 1px;
+    border: 1px solid #000000;
+    }
+</style>
+
+<h1><u>Task Manager</u></h1>
+
+<body>
+    <!-- Creates the form where task information is entered -->
+    <form id="tasks">
+        <input type="text" id="task" name="Tasks" placeholder="Type Task Here">
+        <select id="priority" name="priority">
+            <option value="high">High</option>
+            <option value="medium">Medium</option>
+            <option value="low">Low</option>
+        </select>
+        <input type="checkbox" id="importance" name="importance" value="false">
+        <label for="importance"><b>Important </b></label>
+
+        <button type="submit" id="submit">Add Task</button>
+    </form>
+
+    <br>
+
+    <!-- This is where all tasks will be listed -->
+    <div id="taskmanager"></div>
+
+</body>
+</html>
